@@ -196,6 +196,7 @@ def get_ics_str(all_class_list, xn='2023', xj='11', xh=''):
                           end_date=get_time('', d['课程周'], d['星期'], d['课程节'], False),
                           description=d['课程名称'], url='url')
         res += '\n'
+    res+='\nEND:VCALENDAR'
     # res += f'''
     # BEGIN:VEVENT
     # UID:wmu_{xn}_{xj}_{i}
@@ -286,5 +287,5 @@ if __name__ == '__main__':
     xn = '2023'
     xj = '11'
     # 登录网页获取cookie
-    cookie = 'JSESSIONID=B8373CF0D292312CCE0D07D8F13D495F'
+    cookie = 'JSESSIONID=CE81DE36C13411228516DBEBBA882EC0'
     get_kb_ics(xn=xn, xj=xj, cookie=cookie)
